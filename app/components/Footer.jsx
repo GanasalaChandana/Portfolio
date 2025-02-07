@@ -14,6 +14,15 @@ const Footer
                  <span>chandanacherry869@gmail.com</span>
             </div>
         </div>
+        <div className="text-center mt-6">
+        <h3 className="text-lg font-semibold">Built With</h3>
+        <div className="flex justify-center gap-6 mt-3">
+          <span className="text-sm bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-md">React</span>
+          <span className="text-sm bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-md">Next.js</span>
+          <span className="text-sm bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-md">Tailwind CSS</span>
+          <span className="text-sm bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-md">Framer Motion</span>
+        </div>
+      </div>
         <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6'>
             <p>© 2025 Chandana Ganasala. All Rights Reserved.</p>
             <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
