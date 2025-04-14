@@ -28,9 +28,10 @@ const About = ({isDarkMode}) => {
     whileInView={{opacity:1}}
     transition={{duration: 0.6, delay:0.8}}className='flex-1'>
                 <p className='mb-10 max-w-2xl font-Ovo'>
-                    I am an experienced Java Backend Developer with over two years of experience in designing and implementing scalable backend solutions.
-                     Proficient in Java, Spring Boot, and MySQL. I have a strong foundation in computer science and software development. 
-                     I am passionate about learning new technologies and building software solutions that solve real-world problems.
+                Dedicated Software Developer with 3+ years of experience in full-stack development, specializing in React.js, Next.js, Spring Boot, and MongoDB. 
+                Proven track record of implementing secure authentication systems, designing scalable RESTful APIs, and optimizing application performance. 
+                Experienced in cloud technologies (AWS), containerization (Docker), and CI/CD pipelines.
+
                 </p>
                 <motion.ul initial= {{opacity:0}}
     whileInView={{opacity:1}}

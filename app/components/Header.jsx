@@ -17,8 +17,10 @@ const Header = () => {
             Software Developer based in California, USA
         </motion.h1>
         <motion.p  initial={{ opacity: 0}} whileInView={{opacity : 1}} transition={{duration: 0.6, delay: 0.7}} className='max-w-2xl mx-auto font-Ovo'>
-        A dedicated Java Backend Developer with over two years of experience in designing and implementing scalable backend 
-solutions. Proficient in Java, Spring Boot, and MySQL.
+            I am a passionate software developer with a strong foundation in full-stack development. 
+            I have experience in building web applications using React.js, Next.js, Spring Boot, and MongoDB.
+            I am always eager to learn new technologies and improve my skills.
+            I am currently looking for new opportunities to grow and contribute to exciting projects.
         </motion.p>
         <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
             <motion.a initial={{y: 30,opacity : 0 }} whileInView={{y:0, opacity: 1}} transition={{duration: 0.6, delay: 1}} href="#contact"

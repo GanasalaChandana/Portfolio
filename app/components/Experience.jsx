@@ -10,7 +10,7 @@ const Experience = () => {
         <motion.h4 initial={{y:-20,opacity:0}} whileInView={{y:0, opacity:1}} transition={{delay:0.3,duration:0.5}} className='text-center mb-2 text-lg font-Ovo'>My Experience</motion.h4>
         <motion.h2 initial={{y:-20,opacity:0}} whileInView={{y:0, opacity:1}} transition={{delay:0.3,duration:0.5}}  className='text-center text-5xl font-Ovo'>My Journey</motion.h2>
         <motion.p initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.7,duration:0.5}} className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
-            I have been working as a software developer for over 2 years. 
+            I have been working as a software developer for over 3 years. 
             I have experience in designing and implementing scalable backend solutions.
         </motion.p>
 
