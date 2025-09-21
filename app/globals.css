@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  font-family: Outfit;
+/* Global font */
+* {
+  font-family: "Outfit", sans-serif;
 }
+
+html { scroll-behavior: smooth; }
+section { scroll-margin-top: 96px; } /* avoids hiding under fixed navbar */
+body { background: #ffffff; color: #0a0a0a; }
+.dark body { background: #0a0a0a; color: #e5e7eb; }
+.prose-narrow { max-width: 68ch; }

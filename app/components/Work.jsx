@@ -1,34 +1,61 @@
+"use client";
+import { motion } from "framer-motion";
+import AnimatedSection from "./AnimatedSection";
 
-import { workData } from '@/assets/assets'  ;
-import React from 'react'
-import { motion } from "motion/react"
+const ProjectCard = ({ title, dates, stack, points, demo, code }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 14 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.45 }}
+    whileHover={{ scale: 1.03, rotate: -0.5 }}
+    className="rounded-2xl border p-6 will-change-transform transition-transform"
+  >
+    <h3 className="text-xl font-semibold">{title}</h3>
+    <p className="text-sm text-muted-foreground">{dates}</p>
+    <p className="mt-2 text-sm"><strong>Tech:</strong> {stack}</p>
+    <ul className="mt-3 list-disc pl-5 space-y-2">
+      {points.map((p, i) => <li key={i}>{p}</li>)}
+    </ul>
+    <div className="mt-4 flex gap-3">
+      {demo && (
+        <a className="px-4 py-2 rounded-full border transition-all duration-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:shadow"
+           href={demo} target="_blank" rel="noreferrer">
+          Live Demo
+        </a>
+      )}
+      {code && (
+        <a className="px-4 py-2 rounded-full bg-neutral-900 text-white dark:bg-white dark:text-black transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+           href={code} target="_blank" rel="noreferrer">
+          GitHub
+        </a>
+      )}
+    </div>
+  </motion.div>
+);
 
-const Work = () => {
-  return (
-        <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:1}} id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
-            <motion.h4 initial={{y:-20,opacity:0}} whileInView={{y:0, opacity:1}} transition={{delay:0.3,duration:0.5}} className='text-center mb-2 text-lg font-Ovo'>My Work</motion.h4>
-            <motion.h2 initial={{y:-20,opacity:0}} whileInView={{y:0, opacity:1}} transition={{delay:0.3,duration:0.5}} className='text-center text-5xl font-Ovo'>My Journey</motion.h2>
-            <motion.p initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.7,duration:0.5}} className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>
-                A selection of my work that I have done over the years that showcase my skills and Problem -solving abilities.
-            </motion.p>
-    
-            <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.9,duration:0.6}}className='space-y-8 dark:text-black'>
-                {workData.map(({title, date, description}, index) => ( 
-                    <motion.div whileHover={{scale:1.05}} transition={{duration:0.3}} key={index} className='border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-x-1 duration-500  dark:hover:bg-darkHover dark:hover:shadow-white'>
-                        <motion.h3 initial={{y:-20,opacity:0}} whileInView={{y:0, opacity:1}} transition={{delay:0.3,duration:0.5}} className='text-xl font-semibold text-gray-800 mb-2 dark:text-white'>{title}</motion.h3>
-                        <motion.p initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:0.7,duration:0.5}} className='text-md text-gray-600 mb-4 dark:text-white/80'>{date}</motion.p>
-                        <motion.ul initial= {{opacity:0}}
-    whileInView={{opacity:1}}
-    transition={{duration: 0.8, delay:1}} className='text-sm text-gray-600 leading-6 list-disc list-inside space-y-2 dark:text-white/80'>
-                            {description.map((desc, i) => (
-                                <motion.li whileHover={{scale:1.1}} key={i}>{desc}</motion.li>
-                            ))}
-                        </motion.ul>
-                    </motion.div>
-                ))}
-            </motion.div>
-        </motion.div>
-  )
-}
+const Work = () => (
+  <AnimatedSection id="work" className="max-w-5xl mx-auto px-6 py-16">
+    <h2 className="text-3xl sm:text-4xl font-serif">My Work</h2>
+    <p className="mt-2 text-neutral-700 dark:text-neutral-300">
+      A selection of projects that showcase my skills and problem-solving.
+    </p>
+    <div className="mt-8 grid gap-6">
+      <ProjectCard
+        title="Sentiment Analysis on Google Gemini LLM"
+        dates="Mar 2024 – May 2024"
+        stack="Python, Google Gemini LLM API, React.js, Naive Bayes, Neural Networks, Logistic Regression"
+        points={[
+          "Analyzed 50,000 IMDB reviews using Gemini LLM; achieved ~95% accuracy on the test dataset.",
+          "Benchmarked classical and neural models with 84–87% accuracy for robustness.",
+          "Built a React.js UI for real-time sentiment analysis with simple data visualizations."
+        ]}
+        demo=""  // add your live demo link
+        code=""  // add your GitHub link
+      />
+      {/* Add more ProjectCard components here */}
+    </div>
+  </AnimatedSection>
+);
 
-export default Work
+export default Work;

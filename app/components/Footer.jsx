@@ -1,44 +1,22 @@
 import React from 'react'
-import Image from 'next/image'
-import { assets } from '@/assets/assets'
 
-const Footer
- = ({isDarkMode}) => {
-  return (
-    <div className='mt-20'>
-        <div className='text-center'>
-            <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt='' className='w-36 mx-auto mb-2 '/>
 
-            <div className='flex justify-center items-center gap-2 max-auto'>
-                <Image src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon} alt='' className='w-6 '/>
-                 <span>chandanacherry869@gmail.com</span>
-            </div>
-        </div>
-        <div className="text-center mt-6">
-        <h3 className="text-lg font-semibold">Built With</h3>
-        <div className="flex justify-center gap-6 mt-3">
-          <span className="text-sm bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-md">React</span>
-          <span className="text-sm bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-md">Next.js</span>
-          <span className="text-sm bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-md">Tailwind CSS</span>
-          <span className="text-sm bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-md">Framer Motion</span>
-        </div>
+const Footer = () => (
+  <footer className="mt-20 py-12 border-t">
+    <div className="max-w-5xl mx-auto px-6 text-center">
+      <div className="space-x-5">
+        <a className="underline" href="mailto:chandanacherry869@gmail.com">Email</a>
+        <a className="underline" href="https://www.linkedin.com/in/chandana-ganasala-656255191/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a className="underline" href="https://github.com/GanasalaChandana" target="_blank" rel="noreferrer">GitHub</a>
       </div>
-        <div className='text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6'>
-            <p>© 2025 Chandana Ganasala. All Rights Reserved.</p>
-            <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
-                <li>
-                    <a target='_blank' href="https://github.com/GanasalaChandana">Github</a>
-                </li>
-                <li>
-                    <a target='_blank' href="https://www.linkedin.com/in/chandana-ganasala-656255191/">Linkedin</a>
-                </li>
-                <li>
-                    <a target='_blank' href="https://x.com/Chandananaidu89">Twitter</a>
-                </li>
-            </ul>
-        </div>
+      <div className="mt-4 text-sm text-muted-foreground">
+        Built with React • Next.js • Tailwind CSS • Framer Motion
+      </div>
+      <div className="mt-2 text-xs text-muted-foreground">
+        © {new Date().getFullYear()} Chandana Ganasala. All rights reserved.
+      </div>
     </div>
-  )
-}
+  </footer>
+);
 
-export default Footer
+export default Footer;
